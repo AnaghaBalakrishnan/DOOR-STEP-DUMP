@@ -1,0 +1,106 @@
+{% extends 'basereg.html' %}
+{% load static %}
+{% block nav %}
+<h1 class="text-center" >DOOR STEP DUMP</h1>
+ <!-- Carousel -->
+ <div class="carousel">
+    <img src="{% static 'images\waste.jpg'  %}" alt="image" height="400px "width='100%' >
+    <!-- <div class="carousel-caption">
+      <h3>DPPR STEP DUMP 4</h3>
+      <p>simple boostrap design</p>
+    </div> -->
+  </div>
+
+{% for i in messages %}
+    {% if i.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+        <div class="alert alert-success">
+          <p>{{i}}</p>
+        </div>
+        {% endif %}
+
+    {% if i.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+        <div class="alert alert-danger">
+          <p>{{i}}</p>
+        </div>
+        {% endif %}
+    {% endfor %}
+
+
+    <a href="{% url 'blist'  %}" class="btn btn-success">Scheduled List</a>
+
+    <div class="container" id="c1">
+      <div class="container my-2">
+        <br>
+        <div class="row">
+          {% for i in waste %}
+
+            <div class="col-md-3">
+                <div class="card mb-3 bg-light">
+                    <img src="{{i.image}}" id="b1"
+                    class="card-img-top" alt=" " />
+                    <div class="card-body text-center">
+                        <h4 class="card-title text-success text-left"> {{i.category}}</h4>
+                        <h6 class="card-title text-success text-left"> Customer Fee Rs-{{i.customer_fee}}</h6>
+                        <p class="card-text text-left">{{i.description}}</p>
+                        <a href="{% url 'book' i.id %}" class="btn btn-success">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+          {% endfor %}
+            
+
+        </div>
+      </div>
+    </div>
+      {% endblock nav %}
+
+  
+              <!-- <div class="text-center">
+                <div class="p-3 mx-n3 mb-4" style="background-color: #eff1f2;">
+                  <h5 class="mb-0">Short View</h5>
+                </div> -->
+
+                <!-- <div class="d-flex flex-column mb-4">
+                    
+                    <span>  {{i.description}}</span>
+                  </div> -->
+  
+                <!-- <div class="d-flex flex-column mb-4">
+                  
+                  <span class="font-weight-bolder font-italic">{{i.description}}</span>
+                </div> -->
+<!-- 
+                <a href="" class="stretched-link"></a> -->
+  <!--   
+                <div class="d-flex flex-column mb-4">
+                  <span class="h1 mb-0">
+                    <i class="fas fa-camera-retro"></i>
+                  </span>
+                  <ul class="list-unstyled mb-0">
+                    <li aria-hidden="true">—</li>
+                    <li>Wide</li>
+                    <li>Telephoto</li>
+                    <li aria-hidden="true">—</li>
+                  </ul>
+                </div> -->
+  
+                <!-- <div class="d-flex flex-column mb-4">
+                  <span class="h1 mb-0">2x</span>
+                  <span>Optical zoom range</span>
+                </div> -->
+  
+                <!-- <div class="p-3 mx-n3 mb-4" style="background-color: #eff1f2;">
+                  <h5 class="mb-0">Capacity</h5>
+                </div> -->
+              <!-- <div class="d-flex flex-row">
+                <button type="button" class="btn btn-info flex-fill me-1" data-mdb-ripple-color="dark">
+                  Learn more
+                </button>
+                <button type="button" class="btn btn-danger flex-fill ms-1">Buy now</button>
+              </div>
+          </div>
+        </div> -->
+        
+     
+ 

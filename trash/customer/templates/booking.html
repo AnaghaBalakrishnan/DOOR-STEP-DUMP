@@ -1,0 +1,223 @@
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css\uhlist.css' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css\book.css' %}">
+    <script src="js/book.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body style="background-color: #6ce28cbd;">
+    
+<nav class="navbar navbar-expand-lg navbar-dark gradient-custom">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Navbar brand -->
+      <a class="navbar-brand" href="#">Home</a>
+  
+      <!-- Toggle button -->
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fas fa-bars text-light"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto d-flex flex-row mt-3 mt-lg-0">
+          <li class="nav-item text-center mx-2 mx-lg-1">
+            <a class="nav-link active" aria-current="page" href="#!">
+              <div>
+                <i class="fas fa-home fa-lg mb-1"></i>
+              </div>
+              
+            </a>
+          </li>
+          <li class="nav-item text-center mx-2 mx-lg-1">
+            <a class="nav-link" href="#!">
+              <div>
+                <i class="far fa-envelope fa-lg mb-1"></i>
+                <span class="badge  bg-dark">1</span>
+              </div>
+              Notifications
+            </a>
+          </li>
+          <li class="nav-item text-center mx-2 mx-lg-1">
+            <a class="nav-link " aria-disabled="true" href="#!">
+              <div>
+                <i class="far fa-envelope fa-lg mb-1"></i>
+                <span class="badge  bg-dark">3</span>
+              </div>
+              New Offers
+            </a>
+          </li>
+          <!-- <li class="nav-item dropdown text-center mx-2 mx-lg-1">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown"
+              aria-expanded="false">
+              <div>
+                <i class="far fa-envelope fa-lg mb-1"></i>
+                <span class="badge  bg-dark"> </span>
+              </div>
+              More
+            </a> -->
+            <!-- Dropdown menu -->
+            <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </li>
+        </ul> -->
+        <!-- Left links -->
+  
+        <!-- Right links -->
+        <ul class="navbar-nav ms-auto d-flex flex-row mt-3 mt-lg-0">
+          <li class="nav-item text-center mx-2 mx-lg-1">
+            <a class="nav-link" href="#!">
+              <div>
+                <i class="fas fa-bell fa-lg mb-1"></i>
+                <span class="badge rounded-pill badge-notification bg-transparent text-dark">*Optional </span>
+              </div>
+              Become a seller
+            </a>
+          </li>
+          <li class="nav-item text-center mx-2 mx-lg-1">
+            <a class="nav-link" href="#!">
+              <div>
+                <i class="fas fa-globe-americas fa-lg mb-1"></i>
+                <span class="badge rounded-pill badge-notification bg-transparent"> </span>
+              </div>
+              About
+            </a>
+          </li>
+        </ul>
+        <!-- Right links -->
+  
+        <!-- Search form -->
+        <form class="d-flex input-group w-auto my-3 my-lg-0">
+          <input type="search" class="form-control" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-white" type="button" data-mdb-ripple-color="dark text-dark">
+            Search
+          </button>
+        </form>
+      </div>
+
+      <img src="{% static 'images\earth.png' %}" alt="image" id="d1">
+
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+
+
+
+
+<h1 class="text-center" >DOOR STEP DUMP</h1>
+ <!-- Carousel -->
+  <div class="carousel">
+    <img src="{% static 'images\waste.jpg'  %}" alt="image" height="400px "width='100%' >
+    <!-- <div class="carousel-caption">
+      <h3>DPPR STEP DUMP 4</h3>
+      <p>simple boostrap design</p>
+    </div> -->
+  </div>
+
+
+  {% for i in messages %}
+  {% if i.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+      <div class="alert alert-success">
+        <p>{{i}}</p>
+      </div>
+      {% endif %}
+
+  {% if i.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+      <div class="alert alert-danger">
+        <p>{{i}}</p>
+      </div>
+      {% endif %}
+  {% endfor %}
+     
+                 
+
+                      <form class="cf" action="" method="post">
+                        {%csrf_token%}
+                        
+                       <div id="cont1" class="container my-2">
+                        <h1 class="text-center">Book Now</h1>
+                        <!-- <div class="row"> -->
+                         <div id="card1" class="card mb-3 p-3 m-2 ">
+                           
+                           
+                          <!-- <input type="text" id="input-name" placeholder="Your Full Name"> -->
+                         
+
+                        
+                        
+
+                        <!-- <div class="half right  cf"></div> -->
+
+                        <h5 class="text-center">Booking Details</h5>
+
+                        <label for="name" style="font-family: inherit;">Name</label>
+                        <input type="text" id="cname"  name="cname" placeholder="John M Doe"><br>
+                        <label for="address" style="font-family: inherit;">Address</label>
+                        <input type="text area" id="address"  name="address" placeholder="ABC , H.No-32 , NewYork"><br>
+                       <label for="phone number" style="font-family: inherit;">Phone Number</label>
+                       <input type="text" id="ph"  name="ph" placeholder="9876543210"><br>
+                  
+                       <label for="waste category" style="font-family: inherit;">Waste Category</label>
+                       <input type="text" id="type"  name="type" placeholder=""><br>
+                      
+                       <label for="bagcount"style="font-family: inherit;">Number of Bags</label>
+                       <input type="text" id="type"  name="type" placeholder="1"><br>
+                       <label for="date" style="font-family: inherit;">Date</label>
+                       <input type="text" id="date"  name="date" placeholder="05/06/2002"><br>
+                       <br>
+
+                        <h5 class="text-center">Account Details</h5> 
+                        <label for="name" style="font-family: inherit;">Card Name</label>
+                        <input type="text" id="cname"  name="cname" placeholder="John M Doe"><br>
+                        <label for="cardnumber" style="font-family: inherit;">Card Number</label>
+                        <input type="text" id="cardnumber"  name="cardnumber" placeholder="1111-2222-3333-4444"><br>
+                        <label for="exp" style="font-family: inherit;">Expiry </label>
+                        <input type="text" id="exp"  name="exp" placeholder="02/23"><br>
+                        <label for="cvv" style="font-family: inherit;">CVV</label>
+                        <input type="text" id="cvv"  name="cvv" placeholder="123"><br>
+                        <input type="submit" value="Book Slot" class="btn btn-outline-success">
+                      </div> 
+                     </div>
+                     </div>
+
+                      </form>
+                <!-- </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+

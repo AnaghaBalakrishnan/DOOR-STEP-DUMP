@@ -1,0 +1,38 @@
+.btn {
+    padding: .45rem 1.5rem .35rem;
+  }
+  
+  .gradient-custom {
+    /* fallback for old browsers */
+    background: #6ce28cbd;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #20513b, #20513b);
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #20513b, #20513b)
+  }
+  .list-group-item{
+    width: 500px;
+  }
+#c1{
+    background-color: #6ce28cbd ;
+  }
+#b1{
+    height: 170px;
+    width: 200;
+}
+
+h1{
+    background-color: #3d8f5abd;
+}
+/* body{
+    background-color: #6ce28cbd 
+
+} */
+.container{
+    background-color: #20513b;
+}
+#d1{
+    height: 80px;
+}

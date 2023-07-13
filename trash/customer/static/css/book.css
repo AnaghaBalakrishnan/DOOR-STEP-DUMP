@@ -1,0 +1,20 @@
+.row{
+
+    background-color: transparent;
+    
+}
+
+#btn1{
+    width: 300px;
+    position: relative;
+    left: 15%;
+}
+#card1{
+    background-color: transparent;
+    position: relative;
+    padding-bottom: 10px;
+}
+#cont1{
+    position: relative;
+    width: 500px;
+}

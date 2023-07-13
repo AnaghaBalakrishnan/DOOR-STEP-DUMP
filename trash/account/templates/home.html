@@ -1,0 +1,953 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Fonicy</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <!-- <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" /> -->
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+
+</head>
+
+<body>
+  {% for i in messages %}
+{% if i.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+    <div class="alert alert-info">
+      <p>{{i}}</p>
+    </div>
+    {% endif %}
+
+{% if i.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+    <div class="alert alert-danger">
+      <p>{{i}}</p>
+    </div>
+    {% endif %}
+{% endfor %}
+
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid header_top_container">
+          <!-- <div class="lang_box dropdown"> -->
+            <!-- <a href="#" title="Language" class="nav-link" data-toggle="dropdown" aria-expanded="true">
+              <img src="images/flag-uk.png" alt="flag" class=" " title="United Kingdom"> <i class="fa fa-angle-down " aria-hidden="true"></i>
+            </a> -->
+            <!-- <div class="dropdown-menu ">
+              <a href="#" class="dropdown-item">
+                <img src="images/flag-france.png" class="" alt="flag">
+              </a>
+            </div> -->
+            <!-- <span>
+              English
+            </span> -->
+          <!-- </div> -->
+          <div class="contact_nav">
+            <a href="">
+              <!-- <i class="fa fa-phone" aria-hidden="false"></i> -->
+              <!-- <i class='fa fa-phone' style='color: white'></i> -->
+              <span>
+                Call : +91 8593033514
+              </span>
+            </a>
+            <a href="">
+              <!-- <i class="fa fa-envelope" aria-hidden="true"></i> -->
+              <span>
+                Email : doorstempdump@gmail.com
+              </span>
+            </a>
+            <a href="">
+              <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
+              <span>
+                instagram: @doorstep_dump_official
+              </span>
+            </a>
+          </div>
+          <!-- <div class="social_box">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div> -->
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="#section6">
+              <img src="images/logo.png" alt="">
+            </a>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#section2">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#section1"> About</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#section3">Project</a>
+                </li> -->
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#section4">Testimonial</a>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="#section5">Contact Us</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#"> Login</a>
+                </li> -->
+                <form class="form-inline">
+                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </ul>
+              <div class="quote_btn-container">
+                <a href="{% url 'signin' %}" class="quote_btn">
+                  Login
+                </a>
+              </div>
+              <div class="quote_btn-container">
+                <a href="{% url 'signup' %}" class="quote_btn">
+                  Sign Up
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section " id="section6">
+      
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+         <!-- <div class=" col-lg-6 order-0 order-md-1"><img id="a1" class="pt-7 pt-md-0 hero-img" src="{% static 'images\bottle-removebg-preview.png' %}" alt="hero-header" /></div> -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-10 mx-auto">
+                  <div class="detail-box">
+                    <h1>
+                      DOOR STEP <br>
+                        DUMP  <br>
+                        
+                      
+                    </h1>
+                    
+                   
+                    
+                    
+                    <div class="btn-box">
+                      <a href="#section5" class="btn1">
+                        Contact Us
+                      </a>
+                      <a href="#section1" class="btn2">
+                        About Us
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-10 mx-auto">
+                  <div class="detail-box">
+                    <h1>
+                      ARCHITECT <br>
+                      BUILDER CONSTRUCTION <br>
+                      SERVICES
+                    </h1>
+                    <div class="btn-box">
+                      <a href="#section5" class="btn1">
+                        Contact Us
+                      </a>
+                      <a href="#section1" class="btn2">
+                        About Us
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-10 mx-auto">
+                  <div class="detail-box">
+                    <h1>
+                      ARCHITECT <br>
+                      BUILDER CONSTRUCTION <br>
+                      SERVICES
+                    </h1>
+                    <div class="btn-box">
+                      <a href="#section5" class="btn1">
+                        Contact Us
+                      </a>
+                      <a href="#section1" class="btn2">
+                        About Us
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-10 mx-auto">
+                  <div class="detail-box">
+                    <h1>
+                      ARCHITECT <br>
+                      BUILDER CONSTRUCTION <br>
+                      SERVICES
+                    </h1>
+                    <div class="btn-box">
+                      <a href="#section5" class="btn1">
+                        Contact Us
+                      </a>
+                      <a href="#section1" class="btn2">
+                        About Us
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-10 mx-auto">
+                  <div class="detail-box">
+                    <h1>
+                      ARCHITECT <br>
+                      BUILDER CONSTRUCTION <br>
+                      SERVICES
+                    </h1>
+                    <div class="btn-box">
+                      <a href="#section5" class="btn1">
+                        Contact Us
+                      </a>
+                      <a href="#section1" class="btn2">
+                        About Us
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <ol class="carousel-indicators">
+          <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+          <li data-target="#customCarousel1" data-slide-to="1"></li>
+          <li data-target="#customCarousel1" data-slide-to="2"></li>
+          <li data-target="#customCarousel1" data-slide-to="3"></li>
+          <li data-target="#customCarousel1" data-slide-to="4"></li>
+        </ol>
+      </div> -->
+
+    </section>
+    <!-- end slider section -->
+  </div>
+
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding" id="section2">
+    <div class="service_container">
+      <div class="container ">
+        <div class="heading_container">
+          <h2>
+            Services
+          </h2>
+          <p>
+           <span> <bold> Here we help you for ; </bold></span>
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-3">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/s1.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Organic Wsate Management
+                </h5>
+                <p>
+                  Organic waste management—Category, reutilization, and impact on soil. Recycling organic waste has benefits, such as utilization of nutrients, conservation of energy, reduction of fertilizers cost, reduction of soil pollution, and sustainability of plant growth
+                </p>
+                <!-- <a href="">
+                  Read More
+                </a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/s2.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Plastic waste management
+                </h5>
+                <p>
+                  While avoiding the generation of plastic waste is overall preferable, environmentally sound management of plastic waste, once it is generated, is essential to protect human health and the environment. Without proper collection and disposal system, plastic contaminate the air, soil and water, thus causing harm to ecosystems and people.
+                </p>
+                <!-- <a href="">
+                  Read More
+                </a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/s3.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Glass wate management
+                </h5>
+                <p>
+                  The environmental impact of waste glass (WG) is one of the major challenges crippling sustainable waste management and mitigation. Reclamation of recycled materials from waste glass remains a tedious task amidst complex technological approaches. 
+                </p>
+                <!-- <a href="">
+                  Read More
+                </a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/s4.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  E-waste management
+                </h5>
+                <p>
+                  E-waste is any electrical or electronic equipment that’s been discarded. They are electronic products that are unwanted, not working, and nearing or at the end of their “useful life.” Computers, televisions, VCRs, stereos, copiers, and fax machines are everyday electronic products. 
+
+
+                </p>
+                <!-- <a href="">
+                  Read More
+                </a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end service section -->
+
+
+  <!-- about section -->
+
+  <section class="about_section" id="section1">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About Us
+              </h2>
+            </div>
+            <p>
+              We are a NON GOVERNMENT ORGANIZATION established in 2015 .<br>
+              We provide end-to-end waste management services based on the principles of circular economy. 
+              We handle waste sustainably & responsibly for individual houses and residences. Are you in confusion with your waste management. Connect with us to ensure that your house becomes zero waste.
+            </p>
+            <!-- <a href="">
+              Read More
+            </a> -->
+          </div>
+        </div>
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="images/about-img.jpg" alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+
+
+  <!-- project section -->
+
+  <!-- <section class="project_section layout_padding" id="section3">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Projects
+        </h2>
+      </div>
+      <div class="carousel-wrap ">
+        <div class="filter_box">
+          <h6>
+            Category filter
+          </h6>
+          <nav class="owl-filter-bar">
+            <a href="#" class="item active" data-owl-filter="*">All</a>
+            <a href="#" class="item" data-owl-filter=".painting">Painting</a>
+            <a href="#" class="item" data-owl-filter=".reconstruction">Reconstruction </a>
+            <a href="#" class="item" data-owl-filter=".repair">Repairs </a>
+            <a href="#" class="item" data-owl-filter=".residential">Residential </a>
+            <a href="#" class="item" data-owl-filter=".styling">Styling </a>
+          </nav>
+        </div>
+
+        <div class="owl-carousel project_carousel">
+          <div class="item painting">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/project1.jpg" alt="" />
+                <a href="" class="pin_link">
+                  <i class="fa fa-link" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Interior work
+                </h5>
+                <p>
+                  alteration in some form, by injected humour, or randomised words which don't look even slightly
+                  believable. If you are going to use
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item reconstruction">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/project2.jpg" alt="" />
+                <a href="" class="pin_link">
+                  <i class="fa fa-link" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Interior work
+                </h5>
+                <p>
+                  alteration in some form, by injected humour, or randomised words which don't look even slightly
+                  believable. If you are going to use
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item repair">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/project1.jpg" alt="" />
+                <a href="" class="pin_link">
+                  <i class="fa fa-link" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Interior work
+                </h5>
+                <p>
+                  alteration in some form, by injected humour, or randomised words which don't look even slightly
+                  believable. If you are going to use
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item residential">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/project1.jpg" alt="" />
+                <a href="" class="pin_link">
+                  <i class="fa fa-link" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Interior work
+                </h5>
+                <p>
+                  alteration in some form, by injected humour, or randomised words which don't look even slightly
+                  believable. If you are going to use
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item styling">
+            <div class="box">
+              <div class="img-box">
+                <img src="images/project1.jpg" alt="" />
+                <a href="" class="pin_link">
+                  <i class="fa fa-link" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Interior work
+                </h5>
+                <p>
+                  alteration in some form, by injected humour, or randomised words which don't look even slightly
+                  believable. If you are going to use
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- end project section -->
+
+  <!-- client section -->
+  <!-- <section class="client_section layout_padding" id="section4">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Testimonial
+        </h2>
+      </div>
+    </div>
+    <div id="customCarousel2" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10 mx-auto">
+                <div class="box">
+                  <div class="img-box">
+                    <img src="images/client.jpg" alt="">
+                  </div>
+                  <div class="detail-box">
+                    <div class="client_info">
+                      <div class="client_name">
+                        <h5>
+                          Morojink
+                        </h5>
+                        <h6>
+                          Customer
+                        </h6>
+                      </div>
+                      <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et
+                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                      cillum
+                      dolore eu fugia
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10 mx-auto">
+                <div class="box">
+                  <div class="img-box">
+                    <img src="images/client.jpg" alt="">
+                  </div>
+                  <div class="detail-box">
+                    <div class="client_info">
+                      <div class="client_name">
+                        <h5>
+                          Morojink
+                        </h5>
+                        <h6>
+                          Customer
+                        </h6>
+                      </div>
+                      <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et
+                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                      cillum
+                      dolore eu fugia
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10 mx-auto">
+                <div class="box">
+                  <div class="img-box">
+                    <img src="images/client.jpg" alt="">
+                  </div>
+                  <div class="detail-box">
+                    <div class="client_info">
+                      <div class="client_name">
+                        <h5>
+                          Morojink
+                        </h5>
+                        <h6>
+                          Customer
+                        </h6>
+                      </div>
+                      <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore
+                      et
+                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                      cillum
+                      dolore eu fugia
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#customCarousel2" data-slide-to="0" class="active"></li>
+        <li data-target="#customCarousel2" data-slide-to="1"></li>
+        <li data-target="#customCarousel2" data-slide-to="2"></li>
+      </ol>
+    </div>
+  </section> -->
+  <!-- end client section -->
+
+  <!-- why us section -->
+
+  <section class="why_us_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Why Choose Us?
+        </h2>
+      </div>
+      <div class="why_us_container">
+        <div class="box">
+          <div class="img-box">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.bQPG_FoeGuWG_esGDABPXwHaHa&pid=Api&P=0&h=180" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+             To avoid  Public Health Disaster
+            </h5>
+            <p>
+              Improper sewage disposal is another giant public health concern. In areas where cities don’t properly manage waste, at least 2 billion people use drinking water sources that have been contaminated with feces. The effects of improper sewage disposal can sometimes lead to outbreaks of deadly diseases.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.8k09Wxk3QdJ_KA9ukNWjFAHaGw&pid=Api&P=0&h=180" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Predictions of Future Waste Growth
+            </h5>
+            <p>
+              World waste production is expected to be approximately 27 billion tonnes per year by 2050, one-third of which will come from Asia, with major contributions from China and India. Waste generation in urban areas of India will be 0.7 kg per person per day in 2025, approximately four to six times higher than in 1999. The problems associated with waste become more acute as the size of communities increase and this provides opportunities for decentralized waste management by self-help groups and NGOs
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.zTsgeh5e2fJ47AE2-4qb6AHaHa&pid=Api&P=0&h=180" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              To Cure From the Global Issue
+            </h5>
+            <p>
+              Waste management is a global issue with local impact and substantially reducing waste generation through prevention, reduction, recycling and reuse is a core concern of the UN goals aimed at reducing the adverse per capita environmental impact of cities. 
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="btn-box">
+        <a href="">
+          Read More
+        </a>
+      </div> -->
+    </div>
+  </section>
+
+  <!-- end why us section -->
+
+  <!-- contact section -->
+  <section class="contact_section layout_padding-bottom" id="section5">
+    <div class="container-fluid">
+      <div class="col-lg-4 col-md-5 offset-md-1">
+        <div class="heading_container">
+          <h2>
+            Contact Us
+          </h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-5 offset-md-1">
+          <div class="form_container">
+            <form action="" method="post" >
+              {% csrf_token %}
+              
+              <div>
+                <input type="text" placeholder="Your Name" />
+                <label for="" style="font-size: 15px; " id="a1">{{form.name}}</label>
+              </div>
+              <div>
+                <input type="text" placeholder="Phone Number" />
+                <label for="" style="font-size: 15px; " id="a1">{{form.phone}}</label>
+              </div>
+              <div>
+                <input type="email" placeholder="Email" />
+                <label for="" style="font-size: 15px; " id="a1">{{form.email}}</label>
+              </div>
+              <div>
+                <input type="text" class="message-box" placeholder="Message" />
+                <label for="" style="font-size: 15px; " id="a1">{{form.message}}</label>
+              </div>
+              <div class="btn_box">
+                <button>
+                  SEND
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-6 px-0">
+          <div class="map_container">
+            <div class="map">
+              <div id="googleMap"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+
+  <!-- info section -->
+  <section class="info_section ">
+
+    <div class="container">
+      <div class="contact_nav">
+        <a href="">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          <span>
+            Call : +91 8593033514
+          </span>
+        </a>
+        <a href="">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <span>
+            Email : doorstepdump@gmail.com
+          </span>
+        </a>
+        <a href="">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <span>
+            instagram: @doorstep_dump_official
+          </span>
+        </a>
+      </div>
+
+      <div class="info_top ">
+        <div class="row info_main_row">
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="info_links">
+              <h4>
+                QUICK LINKS
+              </h4>
+              <div class="info_links_menu">
+                <a class="" href="#section6">Home <span class="sr-only">(current)</span></a>
+                <a class="" href="#section2">Services</a>
+                <a class="" href="#section1"> About</a>
+                <!-- <a class="" href="project.html">Project</a> -->
+                <!-- <a class="" href="testimonial.html">Testimonial</a> -->
+                <a class="" href="#section5">Contact Us</a>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
+            <div class="info_post">
+              <h5>
+                INSTAGRAM FEEDS
+              </h5>
+              <div class="post_box">
+                <div class="img-box">
+                  <img src="images/instagram.jpg" alt="">
+                </div>
+                <div class="img-box">
+                  <img src="images/instagram.jpg" alt="">
+                </div>
+                <div class="img-box">
+                  <img src="images/instagram.jpg" alt="">
+                </div>
+                <div class="img-box">
+                  <img src="images/instagram.jpg" alt="">
+                </div>
+                <div class="img-box">
+                  <img src="images/instagram.jpg" alt="">
+                </div>
+                <div class="img-box">
+                  <img src="images/instagram.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <div class="col-md-4">
+            <div class="info_form">
+              <h4>
+                SIGN IN TO EXPERIENCE OUR SERVICE
+              </h4>
+              
+              <div class="quote_btn-container">
+                <a href="{% url 'signin' %}" class="quote_btn">
+                  Login
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="info_bottom">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="info_logo">
+              <a href="">
+                <img src="images/logo2.png" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 ml-auto">
+            <div class="social_box">
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div> -->
+    </div>
+  </section>
+  <!-- end info_section -->
+
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="">Door Step Dump</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!--  OwlCarousel 2 - Filter -->
+  <script src="https://huynhhuynh.github.io/owlcarousel2-filter/dist/owlcarousel2-filter.min.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>
